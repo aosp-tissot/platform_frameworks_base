@@ -897,6 +897,9 @@ public class SignalStrength implements Parcelable {
         if (DBG) log("getLTELevel - rsrp:" + mLteRsrp + " snr:" + mLteRssnr + " rsrpIconLevel:"
                 + rsrpIconLevel + " snrIconLevel:" + snrIconLevel
                 + " lteRsrpBoost:" + mLteRsrpBoost);
+	
+	/* Ignore RSSNR for now */
+	if(rsrpIconLevel != -1) return rsrpIconLevel;
 
         /* Valid values are (0-63, 99) as defined in TS 36.331 */
         // TODO the range here is probably supposed to be (0..31, 99). It's unclear if anyone relies
