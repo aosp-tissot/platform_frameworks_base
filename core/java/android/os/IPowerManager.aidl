@@ -68,8 +68,4 @@ interface IPowerManager
 
     // controls whether PowerManager should doze after the screen turns off or not
     void setDozeAfterScreenOff(boolean on);
-
-    // temporarily overrides the button brightness settings to allow the user to
-    // see the effect of a settings change without applying it immediately
-    void setTemporaryButtonBrightnessSettingOverride(int brightness);
 }
